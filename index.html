@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vending Machine</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="blind">Vending Machine</h1>
+        <img src="img/Logo_img.png" alt="">
+    </header>
+    <main>
+        <article class="wrapper-content">
+            <div class="wrapper-machine">
+                <ol class="list-item">
+                    <li>
+                        <label class="item" for="item-0"><img src="img/Original_Cola.png"
+                                alt="기본 콜라">Original_Cola<button id="item-0" class="btn-item"
+                                type="button">1000원</button></label>
+                    </li>
+                    <li>
+                        <label class="item" for="item-1"><img src="img/Violet_Cola.png" alt="보라색 콜라">Violet_Cola<button
+                                id="item-1" class="btn-item" type="button">1000원</button></label>
+                    </li>
+                    <li>
+                        <label class="item" for="item-2"><img src="img/Yellow_Cola.png" alt="노란색 콜라">Yellow_Cola<button
+                                id="item-2" class="btn-item" type="button">1000원</button></label>
+                    </li>
+                    <li>
+                        <label class="item" for="item-3"><img src="img/Cool_Cola.png" alt="푸른색 콜라">Cool_Cola<button
+                                id="item-3" class="btn-item" type="button">1000원</button></label>
+                    </li>
+                    <li>
+                        <label class="item" for="item-4"><img src="img/Green_Cola.png" alt="초록색 콜라">Green_Cola<button
+                                id="item-4" class="btn-item" type="button">1000원</button></label>
+                    </li>
+                    <li>
+                        <label class="item" for="item-5"><img src="img/Orange_Cola.png" alt="주황색 콜라">Orange_Cola<button
+                                id="item-5" class="btn-item" type="button">1000원</button></label>
+                    </li>
+                </ol>
+                <div class="wrapper-btn">
+                    <p class="money">잔액 : <span id="remains">1,000 원</span></p>
+                    <button type="button" class="return">거스름돈 반환</button>
+                    <input class="input-money" type="text" placeholder="입금액 입력">
+                    <button type="button" class="input">입금</button>
+                    <ol id="kart" class="list-kart"></ol>
+                    <button class="get">획득</button>
+                </div>
+            </div>
+            <div class="wrapper-result">
+                <div class="assets">
+                    <p class="money">소지금 : <span id="assets">25,000원</span></p>
+                </div>
+                <div class="wrapper-list-result">
+                    <p class="result-title">획득한 음료</p>
+                    <ol id="earned" class="list-kart">
+                        <!-- <li>
+                                <img src="img/Original_Cola.png" alt="기본 콜라">
+                                <p class="item-name">Original_Cola</p>
+                                <span class="count">1</span>
+                            </li> -->
+                    </ol>
+                    <p class="result-money">총금액 : 0 원</p>
+                </div>
+            </div>
+        </article>
+        <script src="script.js"></script>
+    </main>
+</body>
+
+</html>

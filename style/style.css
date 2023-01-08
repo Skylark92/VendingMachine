@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR&display=swap");
+
+:root,
+button,
+input {
+    font-family: "Noto Sans KR", sans-serif;
+}
+button {
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+body,
+p {
+    padding: 0;
+    margin: 0;
+}
+ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header img {
+    vertical-align: top;
+}
+/* 상단 */
+header {
+    text-align: center;
+}
+.blind {
+    display: none;
+}
+header img {
+    width: 386px;
+}
+body {
+    background-color: #eae8fe;
+}
+/* 본문 */
+/* 입력 화면 */
+header {
+    margin-bottom: 68px;
+}
+
+.wrapper-content {
+    background-color: #eae8fe;
+    display: flex;
+    width: 748px;
+    margin: 0 auto;
+    gap: 28px;
+}
+
+.wrapper-machine {
+    background-color: white;
+    width: 360px;
+    padding: 31px 27px 28px 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+}
+/* 음료 목록 */
+.list-item li {
+    position: relative;
+}
+.list-item {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 94px);
+    /* grid-template-rows: 130px; */
+    gap: 12px;
+}
+.item img {
+    display: block;
+    width: 36px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+}
+.item {
+    display: block;
+    font-size: 9px;
+    background-color: white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    /* border: 3px solid #6327fe; */
+    border-radius: 10px;
+    text-align: center;
+    padding: 11px 0 9px 0;
+    position: relative;
+}
+.btn-item {
+    width: 70px;
+    height: 22px;
+    border-radius: 50px;
+    border: none;
+    background-color: #6327fe;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding-bottom: 2px;
+    margin-top: 5px;
+}
+.item:hover:not(.sold-out) {
+    outline: 3px solid #6327fe;
+}
+.item:active {
+    scale: 0.95;
+}
+/* .sold-out::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+.sold-out::after {
+    display: block;
+    content: "";
+    width: 57px;
+    height: 45px;
+    background-image: url("../img/Sold-out.png");
+    background-size: contain;
+    position: absolute;
+    top: 49px;
+    left: 19px;
+} */
+.sold-out::after {
+    content: "품절";
+    position: absolute;
+    inset: 0;
+    color: transparent;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url(../img/Sold-out.png);
+    background-position: center;
+    background-size: 57.51px 44.85px;
+    background-repeat: no-repeat;
+}
+/* 하단 버튼 모음 */
+.wrapper-btn {
+    display: grid;
+    grid-template-columns: 200px 94px;
+    grid-template-rows: 33px 33px 106px;
+    column-gap: 12px;
+    row-gap: 11px;
+}
+/* 잔액 표시 */
+.money {
+    background-color: #eae8fe;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 6px 10px 8px 10px;
+}
+#remains,
+#assets {
+    float: right;
+}
+
+/* 반환 버튼 */
+.wrapper-machine .return {
+    font-size: 13px;
+    /* padding: 6px 9px 8px 10px; */
+    background-color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+}
+
+/* 입금액 입력 */
+.wrapper-machine .input-money {
+    font-size: 13px;
+    padding-left: 6px;
+}
+
+/* 입금 버튼 */
+.wrapper-machine .input {
+    background-color: white;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.5));
+    border-radius: 5px;
+}
+
+/* 장바구니 */
+.list-kart {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: #eae8fe;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    padding: 12px 18px 12px 12px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* scrollbar-color: white;
+    scrollbar-width: 4px; */
+}
+.list-kart::-webkit-scrollbar {
+    width: 12px;
+}
+.list-kart::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 4px solid transparent;
+}
+.list-kart::-webkit-scrollbar-track {
+    background-color: #eae8fe;
+    border-radius: 10px;
+}
+.list-kart li {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    padding: 6px 8px 7px 10px;
+    border-radius: 5px;
+}
+.list-kart li img {
+    width: 18px;
+    height: 33px;
+    vertical-align: top;
+}
+.item-name {
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    padding-left: 10px;
+}
+.count {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+    line-height: 28px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-left: auto;
+}
+/* 획득 버튼 */
+.wrapper-machine .get {
+    color: white;
+    font-weight: bold;
+    background: #6327fe;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+/* 결과 화면 */
+.wrapper-result {
+    background-color: #eae8fe;
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* 소지금 */
+.assets {
+    background-color: white;
+}
+.wrapper-result .money {
+    margin: 9px 27px;
+}
+
+/* 획득한 음료 */
+.wrapper-result .wrapper-list-result {
+    background-color: white;
+    padding: 25px 27px 26px 27px;
+}
+.wrapper-result .wrapper-list-result .result-title,
+.wrapper-result .wrapper-list-result .result-money {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+.wrapper-result .wrapper-list-result .list-kart {
+    margin-top: 13px;
+    height: 364px;
+    box-sizing: border-box;
+}
+
+.wrapper-result .wrapper-list-result .result-money {
+    font-size: 12px;
+    text-align: right;
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 750px) {
+    .wrapper-content {
+        width: 360px;
+        flex-direction: column;
+    }
+}
